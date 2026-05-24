@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronájem ozvučení</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .menu {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+        }
+
+        .menu a {
+            color: #111;
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Lexend", sans-serif;
+            background: rgba(91, 235, 239);
+            color: #111;
+        }
+
+        .hero {
+            max-width: 1300px;
+            margin: 0 auto;
+            min-height: 100vh;
+            padding: 60px 40px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .left {
+            flex: 1;
+            max-width: 620px;
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .right img {
+            max-width: 520px;
+            width: 100%;
+            display: block;
+        }
+
+        .small-title {
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 72px;
+            line-height: 0.95;
+            margin: 0 0 28px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 22px;
+            line-height: 1.7;
+            max-width: 560px;
+            margin-bottom: 42px;
+        }
+
+        h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .services {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 32px;
+        }
+
+        .services li {
+            font-size: 22px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        }
+
+        .note {
+            font-size: 20px;
+            line-height: 1.7;
+            max-width: 560px;
+            margin-bottom: 36px;
+        }
+
+        .contact {
+            display: inline-block;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            padding: 18px 26px;
+            border-radius: 12px;
+            font-size: 20px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+
+
+        @media (max-width: 960px) {
+            .hero {
+                flex-direction: column;
+                min-height: auto;
+                padding: 40px 24px;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .subtitle,
+            .services li,
+            .note {
+                font-size: 18px;
+            }
+
+            .right {
+                justify-content: center;
+            }
+
+            .right img {
+                max-width: 420px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="menu">
+        <a href="index.html">Domů</a>
+        <a href="cenik.html">Ceník</a>
+
+    </nav>
+    <section class="hero">
+
+        <div class="left">
+            <div class="small-title">PRONÁJEM OZVUČENÍ</div>
+
+            <h1>Profesionální zvuk<br>pro vaše akce</h1>
+
+            <div class="subtitle">
+                Nabízím pronájem zvukové techniky pro soukromé i firemní akce.
+                Oslavy, firemní večírky, menší koncerty i venkovní akce.
+                Podle velikosti prostoru, počtu hostů a charakteru akce
+                pomohu navrhnout vhodné řešení ozvučení.
+            </div>
+
+            <h2>Nabízené služby</h2>
+
+            <ul class="services">
+                <li>Pronájem techniky bez obsluhy</li>
+                <li>Dovoz a instalace</li>
+                <li>Obsluha techniky během akce</li>
+                <li>DJ produkce</li>
+            </ul>
+
+            <div class="note">
+                Každou akci řeším individuálně podle prostoru,
+                počtu hostů a požadavků pořadatele.
+            </div>
+
+            <a class="contact" href="tel:+420733475083">
+                Nezávazně poptat nabídku<br>
+                +420 733 475 083
+            </a>
+        </div>
+
+        <div class="right">
+            <img src="sestava.jpg" alt="Ozvučovací sestava">
+        </div>
+
+    </section>
+
+</body>
+
+</html>
