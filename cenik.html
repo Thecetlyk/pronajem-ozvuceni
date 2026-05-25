@@ -32,7 +32,7 @@
         .hero {
             max-width: 1300px;
             margin: 0 auto;
-            min-height: 100vh;
+            min-height: auto;
             padding: 60px 40px;
             display: flex;
             align-items: flex-start;
@@ -97,7 +97,7 @@
             line-height: 1.3;
             margin: 0;
             max-width: 1300px;
-            min-width: 800px;
+            min-width: auto;
         }
 
         .contact {
@@ -111,6 +111,44 @@
             line-height: 1.5;
             font-weight: 500;
             margin-top: 50px;
+        }
+
+        @media (max-width: 900px) {
+
+            .hero {
+                flex-direction: column;
+                padding: 120px 24px 40px;
+                gap: 40px;
+            }
+
+            .left,
+            .right {
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .subtitle,
+            .services li,
+            .note {
+                font-size: 18px;
+            }
+
+            .menu {
+                right: 24px;
+                top: 20px;
+            }
+
+            .right img {
+                width: 100%;
+                max-width: 420px;
+            }
         }
     </style>
 </head>
