@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang=".cs">
+<html lang="cs">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Pronájem ozvučení v Liberci a okolí. Ozvučení oslav, večírků, svateb a firemních akcí.">
-    <title>Technika</title>
+
+    <meta name="description" content="Technika pro pronájem ozvučení v Liberci a okolí.">
+
+    <title>Technika | Ozvučení Liberec</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <link rel="icon" type="image/png" href="favicon.png">
 
     <style>
@@ -18,201 +21,252 @@
             box-sizing: border-box;
         }
 
-        .menu {
-            position: absolute;
-            top: 30px;
-            right: 40px;
-        }
-
-        .menu a {
-            color: #111;
-            text-decoration: none;
-            margin-left: 24px;
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-        .hero {
-            max-width: 1300px;
-            margin: 0 auto;
-            min-height: auto;
-            padding: 60px 40px;
-            display: flex;
-            align-items: flex-start;
-            gap: 40px;
-        }
-
-        .left {
-            flex: 1;
-            max-width: 620px;
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             margin: 0;
             font-family: "Lexend", sans-serif;
-            background: rgba(91, 235, 239);
+            background: rgb(91, 235, 239);
             color: #111;
         }
 
+        /* Horní navigace */
+
+        header {
+            min-height: 100px;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo img {
+            width: auto;
+            height: 100px;
+            display: block;
+            transition: transform 0.2s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.04);
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .menu a {
+            color: #000;
+            text-decoration: none;
+            font-size: 21px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .menu a:hover {
+            color: rgb(0, 70, 70);
+        }
+
+        /* Hlavní obsah */
+
+        main {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 50px 40px 80px;
+        }
 
         h1 {
-            font-size: 34px;
-            margin-bottom: 5px;
-            margin-top: 50px;
+            margin: 0 0 35px;
+            font-size: 44px;
+            line-height: 1.1;
         }
 
-        .subtitle {
-            font-size: 22px;
-            line-height: 1.7;
-            max-width: 560px;
-            margin-bottom: 42px;
+        .equipment-list {
+            display: grid;
+            gap: 40px;
         }
 
-        .services {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 32px;
+        .equipment-item {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);
+            align-items: center;
+            gap: 50px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.18);
         }
 
-        .services li {
-            font-size: 22px;
-            padding: 16px 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        .equipment-item:last-child {
+            border-bottom: none;
         }
 
-        .price-item {
-            margin-bottom: 20px;
-        }
-
-        .price-item h2 {
-            font-size: 22px;
-            margin-bottom: 0px;
-            font-weight: 800;
-            margin-top: 5px;
-        }
-
-        .price-item p {
-            font-size: 18px;
+        .equipment-text h2 {
+            margin: 0 0 12px;
+            font-size: 25px;
             line-height: 1.3;
-            margin: 0;
-            max-width: 1300px;
-            min-width: auto;
         }
 
-        .contact {
-            display: inline-block;
-            background: #111;
-            color: white;
-            text-decoration: none;
-            padding: 18px 26px;
-            border-radius: 12px;
-            font-size: 20px;
-            line-height: 1.5;
-            font-weight: 500;
-            margin-top: 50px;
+        .equipment-text p {
+            margin: 0;
+            max-width: 700px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .equipment-image img {
+            width: 100%;
+            max-height: 340px;
+            display: block;
+            object-fit: contain;
         }
 
         footer {
-            padding: 40px;
+            padding: 35px 24px;
             text-align: center;
             font-size: 14px;
             opacity: 0.7;
         }
 
-        .menu a:hover {
-            opacity: 0.6;
-        }
+        /* Mobilní verze */
 
-        .contact:hover {
-            transform: translateY(-2px);
-            transition: 0.2s;
-        }
-
-        @media (max-width: 900px) {
-
-            .hero {
+        @media (max-width: 800px) {
+            header {
+                padding: 10px 24px;
                 flex-direction: column;
-                padding: 120px 24px 40px;
-                gap: 40px;
+                justify-content: center;
             }
 
-            .left,
-            .right {
-                max-width: 100%;
-            }
-
-            h1 {
-                font-size: 42px;
-            }
-
-            h2 {
-                font-size: 28px;
-            }
-
-            .subtitle,
-            .services li,
-            .note {
-                font-size: 18px;
+            .logo img {
+                height: 80px;
             }
 
             .menu {
-                right: 24px;
-                top: 20px;
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px 24px;
+                padding-bottom: 14px;
             }
 
-            .right img {
-                width: 100%;
-                max-width: 420px;
+            .menu a {
+                font-size: 17px;
+            }
+
+            main {
+                padding: 40px 24px 60px;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+
+            .equipment-item {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .equipment-text h2 {
+                font-size: 23px;
+            }
+
+            .equipment-text p {
+                font-size: 17px;
+            }
+
+            .equipment-image img {
+                max-height: 300px;
             }
         }
     </style>
 </head>
 
 <body>
-    <nav class="menu">
-        <a href="index.html">Domů</a>
-        <a href="cenik.html">Ceník</a>
-        <a href="technika.html">Technika</a>
-    </nav>
 
-    <section class="hero">
+    <header>
+        <a href="index.html" class="logo">
+            <img src="logo mod.png" alt="Ozvučení Liberec">
+        </a>
 
-        <div class="left">
+        <nav class="menu" aria-label="Hlavní navigace">
+            <a href="index.html">Domů</a>
+            <a href="cenik.html">Ceník</a>
+            <a href="technika.html">Technika</a>
+        </nav>
+    </header>
 
-            <h1>Technika</h1>
-            <div class="price-item">
-                <h2>2× the box Pro DSX 115</h3>
-                    <p>Výkonný aktivní 15" širokopásmový reproduktor s výkonem 2000 W</p>
-                    <div class="right">
-                        <img src="DSX 115.jpg" alt="Ozvučovací sestava">
-                    </div>
-            </div>
-            <div class="price-item">
-                <h2>4× the box Pyrit 212 Sub A</h3>
-                    <p>Výkonný aktivní subwoofer se dvěma 12" měniči s výkonem 1000 W RMS</p>
-                    <div class="right">
-                        <img src="Pyrit 212.jpg" alt="Ozvučovací sestava">
-                    </div>
-            </div>
-            <div class="price-item">
-                <h2>Mixážní pult RCF F 6X</h3>
-                    <p>Analogový mixážní pult, 6 kanálů, vstupy: 2× XLR, 6× 6,3 mm Jack, 4× RCA, výstupy: 2× XLR, 3× 6,3
-                        mm Jack, phantomové napájení +48V</p>
-                    <div class="right">
-                        <img src="RCF F 6X.jpg" alt="Ozvučovací sestava">
-                    </div>
-            </div>
-            <div class="price-item">
-                <h2>DJ kontroler Numark Party Mix MKII</h3>
-                    <div class="right">
-                        <img src="Numark MKII.jpg" alt="Ozvučovací sestava">
-                    </div>
-            </div>
-        </div>
-    </section>
+    <main>
+        <h1>Technika</h1>
+
+        <section class="equipment-list">
+
+            <article class="equipment-item">
+                <div class="equipment-text">
+                    <h2>2× the box Pro DSX 115</h2>
+                    <p>
+                        Výkonný aktivní 15" širokopásmový reproduktor
+                        s výkonem 2000 W.
+                    </p>
+                </div>
+
+                <div class="equipment-image">
+                    <img src="DSX 115.jpg" alt="Reproduktor the box Pro DSX 115">
+                </div>
+            </article>
+
+            <article class="equipment-item">
+                <div class="equipment-text">
+                    <h2>4× the box Pyrit 212 Sub A</h2>
+                    <p>
+                        Výkonný aktivní subwoofer se dvěma 12" měniči
+                        a výkonem 1000 W RMS.
+                    </p>
+                </div>
+
+                <div class="equipment-image">
+                    <img src="Pyrit 212.jpg" alt="Subwoofer the box Pyrit 212 Sub A">
+                </div>
+            </article>
+
+            <article class="equipment-item">
+                <div class="equipment-text">
+                    <h2>Mixážní pult RCF F 6X</h2>
+                    <p>
+                        Analogový šestikanálový mixážní pult se vstupy
+                        2× XLR, 6× 6,3mm jack a 4× RCA. Nabízí výstupy
+                        2× XLR, 3× 6,3mm jack a fantomové napájení +48 V.
+                    </p>
+                </div>
+
+                <div class="equipment-image">
+                    <img src="RCF F 6X.jpg" alt="Mixážní pult RCF F 6X">
+                </div>
+            </article>
+
+            <article class="equipment-item">
+                <div class="equipment-text">
+                    <h2>DJ kontroler Numark Party Mix MKII</h2>
+                    <p>
+                        Kompaktní DJ kontroler vhodný pro hudební produkci
+                        na oslavách, večírcích a menších společenských akcích.
+                    </p>
+                </div>
+
+                <div class="equipment-image">
+                    <img src="Numark MKII.jpg" alt="DJ kontroler Numark Party Mix MKII">
+                </div>
+            </article>
+
+        </section>
+    </main>
+
     <footer>
         © 2026 Ozvučení Liberec
     </footer>
+
 </body>
 
 </html>
